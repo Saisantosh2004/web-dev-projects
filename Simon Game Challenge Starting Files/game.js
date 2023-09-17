@@ -23,6 +23,14 @@ $(document).keypress(function(){
     }
 });
 
+function startgame(){
+    if(!started){
+        $("#level-title").text("Level "+level);
+        nextSequence();
+        started=true;
+    }
+}
+
 function startOver(){
     gamePattern=[];
     started=false;
